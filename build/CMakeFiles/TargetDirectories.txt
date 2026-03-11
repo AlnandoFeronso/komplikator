@@ -1,0 +1,8 @@
+/home/wiktor/Documents/Projects/komplikator/build/CMakeFiles/intrinsics_gen.dir
+/home/wiktor/Documents/Projects/komplikator/build/CMakeFiles/vt_gen.dir
+/home/wiktor/Documents/Projects/komplikator/build/CMakeFiles/omp_gen.dir
+/home/wiktor/Documents/Projects/komplikator/build/CMakeFiles/acc_gen.dir
+/home/wiktor/Documents/Projects/komplikator/build/CMakeFiles/target_parser_gen.dir
+/home/wiktor/Documents/Projects/komplikator/build/CMakeFiles/komplikator.dir
+/home/wiktor/Documents/Projects/komplikator/build/CMakeFiles/edit_cache.dir
+/home/wiktor/Documents/Projects/komplikator/build/CMakeFiles/rebuild_cache.dir
