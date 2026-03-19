@@ -45,6 +45,7 @@ enum Type {
   KW_UNSIGNED,
   KW_VOID,
   KW_VOLATILE,
+  KW_ALICJA,
   KW_WHILE,
 
   OP_ASSIGN, // =

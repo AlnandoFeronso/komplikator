@@ -168,7 +168,8 @@ std::string token::typeToString(Type type) {
     return "PUNC_ARROW";
   case PUNC_ELLIPSIS:
     return "PUNC_ELLIPSIS";
-
+  case KW_ALICJA:
+    return "KW_ALICJA";
   default:
     return "UNKNOWN_TYPE";
   }
@@ -187,5 +188,4 @@ const llvm::StringMap<Type> KeywordFilter::tokenTable = {
     {"switch", KW_SWITCH},   {"typedef", KW_TYPEDEF},
     {"union", KW_UNION},     {"unsigned", KW_UNSIGNED},
     {"void", KW_VOID},       {"volatile", KW_VOLATILE},
-    {"while", KW_WHILE},
-};
+    {"while", KW_WHILE},     {"alicja", KW_ALICJA}};

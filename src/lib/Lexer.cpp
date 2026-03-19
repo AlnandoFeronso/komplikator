@@ -31,7 +31,7 @@ void Lexer::next(token::Token &token) {
     token::Type type = token::KeywordFilter::getToken(word);
     if (type != token::TOK_INVALID) {
       formToken(token, end, type);
-    }else{
+    } else {
       formToken(token, end, token::TOK_IDENTIFIER);
     }
   } else if (charhelper::isDigit(*bufferPtr)) {

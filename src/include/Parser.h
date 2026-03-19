@@ -1,31 +1,26 @@
 #pragma once
-#include "Lexer.h"
 #include "AST.h"
+#include "Lexer.h"
+#include "TokenTypes.h"
 #include "llvm/Support/raw_ostream.h"
+#include <memory>
 class Parser {
   Lexer &lex;
-  Token token;
+  token::Token token;
   bool caughtError;
 
-  void error() { llvm::errs() << "Unexpected: " << token.GetText() << "\n"; }
-  void advance() { lex.next(token); }
-  bool expect(Token::TokenType type) {
-    if (type != token.GetType()) {
-      error();
-      return true;
-    }
-    return false;
-  }
-  bool consume(Token::TokenType type){
-	if(expect(type)){
-		return true;
-	}
-	advance();
-	return false;
-  }
+  bool expect(token::Type);
+  bool consume(token::Type);
+  void advance();
+  
 
-  AST* parseCalc();
-  Expr* parseExpr();
-  Expr* parseTerm();
-  Expr* parseFactor();
+  bool parseSimpleExpression() = delete;
+  bool parseInclude() = delete;
+  bool parseDeclarations() = delete;
+  bool parseConstantDeclarations() = delete;
+  bool parseTerm() = delete;
+  bool parseExpression() = delete;
+  
+  std::unique_ptr<ModuleDeclaration> parse();
+
 };
