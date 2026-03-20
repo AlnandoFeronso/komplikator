@@ -39,6 +39,7 @@
 
 # debug information files
 *.dwo
-
+build/komplikator
+build/*.*
 /build/*.*
 !/build/**/*.bin
